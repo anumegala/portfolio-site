@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content1 %}
+<script>
+  window.onload = function () {
+    const link = document.createElement("a");
+    link.href = "{% static 'files/megala_resume.pdf' %}";
+    link.download = "megala_resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+</script>
+
+<div class="container text-center mt-5">
+  <h2 class="text-light">Resume Download</h2>
+  <p class="text-success">Your resume is downloading. If it doesn’t, <a href="{% static 'files/megala_resume.pdf' %}" download>click here</a>.</p>
+  <iframe src="{% static 'files/megala_resume.pdf' %}" width="80%" height="500px" style="border: none; border-radius: 10px;"></iframe>
+</div>
+{% endblock content1 %}

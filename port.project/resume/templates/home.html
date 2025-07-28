@@ -1,0 +1,36 @@
+{% extends "base.html "%}
+{% load static %}
+{% block content1 %} 
+<div class="row my-5">
+    <div class="col-12 d-flex justify-content-center align-items-center">
+      <div class="circular-image-container">
+        <img class="circular-image" src= "{% static 'images/prof2.jpg' %}" ait="Image">
+      </div>
+    </div>
+
+    <div class="col-12 text-center ms-3">
+        <h4 class="title"> Hi, my name is </h4>
+        <div class="name"> 
+        <h1>Megala</h1> 
+        <h1>I am Software Developer</h1> 
+        </div>
+
+    </div>
+
+    <div class="col-12 text-center ms-3">
+       <div class="col-12 d-flex justify-content-center align-items-center">
+          <a href="https://www.linkedin.com/in/megala-s" target="_blank" class="ms-3">
+              <img src="{% static 'images/link.png' %}" alt="images/link.png" width="50" height="50" class="social_links" >
+          </a>
+
+          <a href="https://github.com/anumegala" target="_blank" class="ms-3">
+              <img src="{% static 'images/git.png' %}" alt="images/link.png" width="50" height="50" class="social_links" >
+          </a>
+
+          <a href="https://www.hackerrank.com/challenges/list-comprehensions/problem" target="_blank" class="ms-3">
+              <img src="{% static 'images/hr.png' %}" alt="images/link.png" width="50" height="50" class="social_links" >
+          </a>
+       </div>
+    </div>
+</div>
+{% endblock content1 %}

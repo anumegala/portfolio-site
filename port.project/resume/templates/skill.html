@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content1 %} 
+<style>
+body {
+  background-color: rgb(20,0,30);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.tech-section {
+  background-color: rgb(20,0,30)a;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.tech-title {
+  color: #d2d2ff;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tech-item {
+  background-color: #1c1c2e;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 150px;
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+  background-color: #2a2a3e;
+  cursor: pointer;
+}
+
+.tech-item img {
+  max-width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 5px black);
+}
+
+.tech-item p {
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+</style>
+<div class="tech-section">
+  <h2 class="tech-title">Tech Stack</h2>
+  <div class="row justify-content-center tech-grid">
+
+    <div class="tech-item" title="HTML">
+      <img src="{% static 'images/html.png' %}" alt="HTML">
+      <p>HTML</p>
+    </div>
+
+    <div class="tech-item" title="CSS">
+      <img src="{% static 'images/css.jpg' %}" alt="CSS">
+      <p>CSS</p>
+    </div>
+
+    <div class="tech-item" title="Python">
+      <img src="{% static 'images/python.jpg' %}" alt="Python">
+      <p>Python</p>
+    </div>
+
+    <div class="tech-item" title="SQL">
+      <img src="{% static 'images/sql.jpg' %}" alt="SQL">
+      <p>SQL</p>
+    </div>
+
+    <div class="tech-item" title="Django">
+      <img src="{% static 'images/dj.jpg' %}" alt="Django">
+      <p>Django</p>
+    </div>
+
+  </div>
+</div>
+{% endblock content1 %}

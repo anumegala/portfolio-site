@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content1 %}
+<div class="container my-5">
+  <div class="row align-items-center justify-content-center">
+
+    
+    <div class="col-md-5 text-light mb-4">
+      <h1 class="text-center">Stay Connected</h1>
+      <h4 class="text-center">megamegala44@gmail.com</h4>
+
+      <div class="d-flex justify-content-center mt-4">
+        <a href="https://www.linkedin.com/in/megala-s" target="_blank" class="mx-3">
+          <img src="{% static 'images/link.png' %}" alt="LinkedIn" width="50" height="50" class="social_links">
+        </a>
+        <a href="https://github.com/anumegala/" target="_blank" class="mx-3">
+          <img src="{% static 'images/git.png' %}" alt="GitHub" width="50" height="50" class="social_links">
+        </a>
+        <a href="https://www.hackerrank.com/domains/python" target="_blank" class="mx-3">
+          <img src="{% static 'images/hr.png' %}" alt="HR Portal" width="50" height="50" class="social_links">
+        </a>
+      </div>
+    </div>
+
+    
+    <div class="col-md-6">
+      <div class="form-container">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone No</label>
+            <input type="tel" class="form-control" id="phone">
+          </div>
+          <div class="mb-3">
+            <label for="msg" class="form-label">Message</label>
+            <textarea class="form-control" id="msg" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100" onclick="showThank()">Submit</button>
+          <p id="thankMsg" class="mt-3 text-success text-center" style="display: none;">Thank you! Your message has been submitted.</p>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+  function showThank() {
+    event.preventDefault(); // stops page reload
+    document.getElementById("thankMsg").style.display = "block";
+  }
+</script>
+
+{% endblock content1 %}
